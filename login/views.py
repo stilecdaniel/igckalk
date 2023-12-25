@@ -10,7 +10,9 @@ from django.core.mail import send_mail
 from django.contrib.auth import logout
 from django.utils.translation import gettext as _
 from django.utils.translation import get_language, activate, gettext
-# Create your views here.
+
+def product_detail(request, product):
+    return render(request, "objednavky/product_detail.html", {"product":product})
 
 def change_password(request):
     if request.method == 'POST':
