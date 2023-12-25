@@ -1,0 +1,79 @@
+
+{% extends "base_auth.html" %}
+{% load i18n %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <div class="border-bottom my-4">
+        <div class="container">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'images/koleno1.jpg' %}" class="d-block w-44" alt="koleno1">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'images/koleno2.jpg' %}" class="d-block w-44" alt="koleno2">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'images/koleno3.jpg' %}" class="d-block w-44" alt="koleno3">
+                </div>
+                </div>
+                <div class="carousel-text">
+                    <p>Spoločnosť I.G.C.Strojal s.r.o. so sídlom v Žiari nad Hronom vyrába a dodáva kvalitné komíny a
+                        komínové systémy pre rodinné domy i priemyselné objekty.
+                        I.G.C.Strojal s.r.o. ponúka kompletný produktový program pre:
+                    </p>
+                    <ul>
+                        <li>antikorové komíny</li>
+                        <li>plastové komíny</li>
+                        <li>hliníkové komíny</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <form method="post" class="my-5">
+            {% csrf_token %}
+            {{ form|crispy }} 
+            <div class="form-group">
+                <button type="submit" class="btn">{% translate "Prihlásiť sa" %}</button>
+                <p>Nemáte účet? <a href="/register"> Zaregistrujte sa</a></p>
+            </div>
+        </form>
+    </div>
+
+    <style>
+        .carousel-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.26); /* Add a semi-transparent background */
+            border-radius: 7px;
+            padding: 20px;
+            color: #fff; /* Text color */
+        }
+
+        .carousel-item img {
+            display: block;
+            margin: 0 auto; /* Center horizontally */
+            max-width: 100%; /* Ensure images don't overflow the container */
+            height: auto; /* Maintain the image's aspect ratio */
+        }
+
+            @media (max-width: 768px) {
+            .carousel-inner, .carousel-text {
+                display: none;
+            }
+        }
+
+        .btn {
+            background-color: rgb(30, 68, 135);
+            color: white;
+            margin-bottom: 3.5px;
+        }
+    </style>
+    
+{% endblock %}

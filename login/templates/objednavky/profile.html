@@ -1,0 +1,26 @@
+{% extends "objednavky/base.html" %}
+{% block user_name %}
+{{ user.username }}
+{% endblock %}
+{% block content %}
+<div class="row mt-3">
+    <div class="col">Používateľské meno:</div>
+    <div class="col">{{ user.username }}</div>
+</div>
+<div class="row mt-3">
+    <div class="col">Krstné meno:</div>
+    <div class="col">{{ user.name }}</div>
+</div>
+<div class="row mt-3">
+    <div class="col">Priezvisko:</div>
+    <div class="col">{{ user.surname }}</div>
+</div>
+<div class="row mt-3">
+    <div class="col">E-mail:</div>
+    <div class="col">{{ user.email }}</div>
+</div>
+<div class="row mt-3">
+    <div class="col">Heslo:</div>
+    <div class="col"><a href="/password/">Zmena hesla</a></div>
+</div>
+{% endblock %}

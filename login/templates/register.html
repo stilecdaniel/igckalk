@@ -1,0 +1,17 @@
+{% extends "base_auth.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+    <form method="POST" class="form-group">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit" class="btn">Zaregistrovať sa</button>
+    </form>
+
+    <style>
+        .btn {
+            background-color: rgb(30, 68, 135);
+            color: white;
+            margin-bottom: 3.5px;
+        }
+    </style>
+{% endblock %}

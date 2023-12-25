@@ -1,0 +1,100 @@
+{% extends "objednavky/base.html" %}
+{% block user_name %}
+{{ user.username }}
+{% endblock %}
+{% block content %}
+<style>
+
+    button {
+        box-sizing : content-box;
+        padding: 0px;
+        height: 11vh;
+        width: 11vw;
+        vertical-align: middle;
+        text-align: center;
+        box-shadow: 5px 5px rgba(0, 0, 0, 0.13);
+        border: 1px solid rgba(0, 0, 0, 0.13);
+        border-radius: 10px;
+        background-color: #ffffff;
+        color: white;
+        cursor: pointer;
+    }
+    .PPs-T120 {
+        background-color: rgba(170, 74, 68);
+    }
+
+    .PPs-AL-T120 {
+        background-color: rgba(154, 30, 27);
+    }
+
+    .AL-T200 {
+        background-color: darkblue;
+    }
+
+    .AL-A-T200 {
+        background-color: blue;
+    }
+
+    .AL-AL-T300 {
+        background-color: rgb(93, 174, 255);
+    }
+
+    .INOX-SRS {
+        background-color: lightgray;
+    }
+
+    .INOX-AGS {
+        background-color: darkgray;
+    }
+
+    .INOX-ERS-EAD {
+        background-color: gray;
+    }
+
+    .PPs-INOX {
+        background-color: rgb(79, 79, 79);
+    }
+
+    .VP {
+        color: black;
+    }
+    
+</style>
+
+<div class="row mt-3">
+    <div class="col">
+        <button class="PPs-T120">PPs T120</button>
+    </div>
+    <div class="col">
+        <button class="PPs-AL-T120">PPs/AL T120</button>
+    </div>
+    <div class="col">
+        <button class="AL-T200">AL T200</button>
+    </div>
+    <div class="col">
+        <button class="AL-A-T200">AL/AL T200</button>
+    </div>
+    <div class="col">
+        <button class="AL-AL-T300">AL AL/AL T300</button>
+    </div>
+</div>
+
+<div class="row mt-3 mb-3">
+    <div class="col">
+        <button class="INOX-SRS">INOX SRS</button>
+    </div>
+    <div class="col">
+        <button class="INOX-AGS">INOX AGS</button>
+    </div>
+    <div class="col">
+        <button class="INOX-ERS-EAD">INOX ERS/EAD</button>
+    </div>
+    <div class="col">
+        <button class="PPs-INOX">PPs/INOX</button>
+    </div>
+    <div class="col">
+        <button class="VP">Všetky produkty </button>
+    </div>
+</div>
+
+{% endblock %}
