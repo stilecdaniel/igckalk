@@ -12,7 +12,7 @@ from django.utils.translation import gettext as _
 from django.utils.translation import get_language, activate, gettext
 
 def product_detail(request, product):
-    return render(request, "objednavky/product_detail.html", {"product":product})
+    return render(request, "objednavky/product_detail.html", {"product":product.replace("-"," ")})
 
 def change_password(request):
     if request.method == 'POST':

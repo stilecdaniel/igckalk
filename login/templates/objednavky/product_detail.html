@@ -4,6 +4,25 @@
 {% endblock %}
 {% block content %}
 
-{{ product }}
+<style>
+    .material-symbols-outlined{
+        color: rgb(30, 68, 135);
+    }
+</style>
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+<div class="pt-3">
+    <a href="/home/">
+        <span class="material-symbols-outlined">
+            arrow_back_ios
+        </span>
+    </a>
+</div>
+
+<div class="text-#0000000">
+    {{ product }}
+</div>
+
 
 {% endblock %}

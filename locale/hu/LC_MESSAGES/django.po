@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-11-25 19:07+0100\n"
+"POT-Creation-Date: 2023-12-26 19:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -35,34 +35,38 @@ msgid "Czech"
 msgstr ""
 
 #: .\login\forms.py:8 .\login\models.py:7
-msgid "Obchodné meno"
-msgstr ""
-
-#: .\login\forms.py:9 .\login\models.py:8
-msgid "Adresa podnikania"
+msgid "Jazyk"
 msgstr ""
 
 #: .\login\forms.py:10 .\login\models.py:9
-msgid "Telefónne číslo"
+msgid "Obchodné meno"
 msgstr ""
 
 #: .\login\forms.py:11 .\login\models.py:10
-msgid "IČO"
+msgid "Adresa podnikania"
 msgstr ""
 
 #: .\login\forms.py:12 .\login\models.py:11
-msgid "DIČ"
+msgid "Telefónne číslo"
 msgstr ""
 
 #: .\login\forms.py:13 .\login\models.py:12
+msgid "IČO"
+msgstr ""
+
+#: .\login\forms.py:14 .\login\models.py:13
+msgid "DIČ"
+msgstr ""
+
+#: .\login\forms.py:15 .\login\models.py:14
 msgid "IBAN"
 msgstr ""
 
-#: .\login\models.py:13
+#: .\login\models.py:15
 msgid "Rabat"
 msgstr ""
 
-#: .\login\models.py:14
+#: .\login\models.py:16
 msgid "Skonto"
 msgstr ""
 
@@ -74,7 +78,7 @@ msgstr ""
 msgid "User permissions"
 msgstr ""
 
-#: .\login\templates\base_auth.html:97
+#: .\login\templates\base_auth.html:114
 #, fuzzy
 #| msgid "Kontakty"
 msgid "Kontakty"
