@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-26 19:42+0100\n"
+"POT-Creation-Date: 2024-01-06 16:57+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,19 +19,19 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n == 1 ? 0 : n % 1 == 0 && n "
 ">= 2 && n <= 4 ? 1 : n % 1 != 0 ? 2: 3);\n"
 
-#: .\igcorder\settings.py:131
+#: .\igcorder\settings.py:135
 msgid "Slovak"
 msgstr ""
 
-#: .\igcorder\settings.py:132
+#: .\igcorder\settings.py:136
 msgid "English"
 msgstr ""
 
-#: .\igcorder\settings.py:133
+#: .\igcorder\settings.py:137
 msgid "Hungarian"
 msgstr ""
 
-#: .\igcorder\settings.py:134
+#: .\igcorder\settings.py:138
 msgid "Czech"
 msgstr ""
 
@@ -79,14 +79,10 @@ msgstr ""
 msgid "User permissions"
 msgstr ""
 
-#: .\login\templates\base_auth.html:114
-#, fuzzy
-#| msgid "contacts"
+#: .\login\templates\base_auth.html:99
 msgid "Kontakty"
-msgstr "kontakty"
+msgstr "Kontakty"
 
 #: .\login\templates\registration\login.html:41
-#, fuzzy
-#| msgid " Prihlásiť sa "
 msgid "Prihlásiť sa"
 msgstr "Prihlásiť sa "

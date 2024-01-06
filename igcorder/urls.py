@@ -20,11 +20,15 @@ from django.conf.urls.i18n import i18n_patterns
 from django.utils.translation import gettext as _
 from django.contrib.auth import views as auth_views
 
-urlpatterns = i18n_patterns(
+urlpatterns = [
+    path('i18n/', include("django.conf.urls.i18n")),
+    path('admin/', admin.site.urls),
+]
+
+urlpatterns += i18n_patterns(
     path("", auth_views.LoginView.as_view(template_name="registration/login.html"), name="login"),
     path("", include("login.urls")),
     path("", include("django.contrib.auth.urls")),
-    path('admin/', admin.site.urls),
 )
 
 
