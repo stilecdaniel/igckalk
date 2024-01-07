@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
-from .forms import RegisterForm
+from .forms import *
 from django.contrib import messages
 from django.contrib.auth import update_session_auth_hash
 from django.contrib.auth.forms import PasswordChangeForm
@@ -11,15 +11,38 @@ from django.contrib.auth import logout
 from django.utils.translation import gettext as _
 from django.utils.translation import get_language, activate, gettext
 
+@login_required()
 def product_detail(request, product):
-    return render(request, "objednavky/product_detail.html", {"product":product.replace("-"," ")})
 
+    if product.lower() == "pps-t120":
+        form_class = PPsT120Form
+    elif product.lower() == ("PPs-AL-T120").lower():
+        form_class = PPsALT120Form
+    elif product.lower() == ("AL-T200").lower():
+        form_class = ALT200Form
+    elif product.lower() == ("AL-AL-T200").lower():
+        form_class = ALALT200Form
+    elif product.lower() == ("AL-AL-AL-T300").lower():
+        form_class = ALALT300Form
+
+    if request.method == "POST":
+        form = form_class(request.POST)
+
+        if form.is_valid():
+            pass
+    else:
+        form = form_class()
+
+
+    return render(request, "objednavky/product_detail.html", {"product":product.replace("-"," "),"form":form})
+
+@login_required()
 def change_password(request):
     if request.method == 'POST':
         form = PasswordChangeForm(request.user, request.POST)
         if form.is_valid():
             user = form.save()
-            update_session_auth_hash(request, user)  # Important!
+            update_session_auth_hash(request, user)
             messages.success(request, 'Your password was successfully updated!')
             return redirect('change_password')
         else:
@@ -30,10 +53,11 @@ def change_password(request):
         'form': form
     })
 
+@login_required()
 def profile_info(request):
     return render(request, "objednavky/profile.html")
 
-@login_required()
+@login_required(login_url="/login/")
 def home(request):
     user = request.user
     print(user)

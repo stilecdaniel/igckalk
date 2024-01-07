@@ -38,8 +38,8 @@
             {% csrf_token %}
             {{ form|crispy }} 
             <div class="form-group">
-                <button type="submit" class="btn">{% blocktranslate %}Prihlásiť sa{% endblocktranslate %}</button>
-                <p>Nemáte účet? <a href="/register"> Zaregistrujte sa</a></p>
+                <button type="submit" class="btn">{% translate "Prihlásiť sa" %}</button>
+                <p>{% translate "Nemáte účet?"%}<a href="/register"> {% translate "Zaregistrujte sa" %}</a></p>
             </div>
         </form>
     </div>

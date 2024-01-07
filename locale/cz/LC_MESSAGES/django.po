@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-01-06 16:57+0100\n"
+"POT-Creation-Date: 2024-01-07 16:22+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,23 +19,23 @@ msgstr ""
 
 #: .\igcorder\settings.py:135
 msgid "Slovak"
-msgstr ""
+msgstr "Slovenský"
 
 #: .\igcorder\settings.py:136
 msgid "English"
-msgstr ""
+msgstr "Anglický"
 
 #: .\igcorder\settings.py:137
 msgid "Hungarian"
-msgstr ""
+msgstr "Maďarský"
 
 #: .\igcorder\settings.py:138
 msgid "Czech"
-msgstr ""
+msgstr "Český"
 
 #: .\login\forms.py:8 .\login\models.py:7
 msgid "Jazyk"
-msgstr ""
+msgstr "Jazyk"
 
 #: .\login\forms.py:10 .\login\models.py:9
 msgid "Obchodné meno"
@@ -77,10 +77,22 @@ msgstr ""
 msgid "User permissions"
 msgstr ""
 
-#: .\login\templates\base_auth.html:99
+#: .\login\templates\base_auth.html:123
 msgid "Kontakty"
 msgstr "Kontakty"
+
+#: .\login\templates\register.html:8
+msgid "Zaregistrovať sa"
+msgstr "Zaregistrovat se"
 
 #: .\login\templates\registration\login.html:41
 msgid "Prihlásiť sa"
 msgstr "Přihlásit se"
+
+#: .\login\templates\registration\login.html:42
+msgid "Nemáte účet?"
+msgstr "Nemáte účet?"
+
+#: .\login\templates\registration\login.html:42
+msgid "Zaregistrujte sa"
+msgstr "Zaregistrujte se"

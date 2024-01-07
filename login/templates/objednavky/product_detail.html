@@ -1,4 +1,5 @@
 {% extends "objednavky/base.html" %}
+{% load crispy_forms_tags %}
 {% block user_name %}
 {{ user.username }}
 {% endblock %}
@@ -20,9 +21,14 @@
     </a>
 </div>
 
-<div class="text-#0000000">
+<div class="text-#00">
     {{ product }}
 </div>
+
+<form method="post" class="form-group">
+    {% csrf_token %}
+    {{ form|crispy }}
+</form>
 
 
 {% endblock %}
